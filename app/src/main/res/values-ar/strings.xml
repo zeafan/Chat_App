@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_name">كلمة المستخدم</string>
+    <string name="passowrd">كلمة المرور</string>
+    <string name="login">Login</string>
+    <string name="register">register new account</string>
+    <string name="signup">Sign Up</string>
+</resources>

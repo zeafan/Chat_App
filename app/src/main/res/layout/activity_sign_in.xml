@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#405771"
+    tools:context=".SignInActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/chat"
+        />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#ffffff"
+            android:id="@+id/edUserName"
+            android:padding="5dp"
+            android:textColorHint="#fff"
+            android:hint="@string/user_name"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#ffffff"
+            android:id="@+id/edPassword"
+            android:padding="5dp"
+            android:textColorHint="#fff"
+            android:hint="@string/passowrd"
+            />
+    </android.support.design.widget.TextInputLayout>
+<Button
+    android:layout_width="match_parent"
+    android:text="@string/login"
+    android:id="@+id/btnLogin"
+    android:textSize="@dimen/d_23_26_30"
+    android:textColor="@color/white"
+    android:layout_margin="20dp"
+    android:background="@color/colorAccent"
+    style="@android:style/Widget.Holo.Button.Borderless"
+    android:layout_height="60dp" />
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/d_5_8_12"
+        android:text="@string/register"
+        />
+</LinearLayout>
