@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.SparseBooleanArray;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -33,6 +34,7 @@ Button btnSelectChat;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_users);
         lstUsers=findViewById(R.id.lstUsers);
+        lstUsers.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
         btnSelectChat=findViewById(R.id.btn_create_chat);
         btnSelectChat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,7 +135,7 @@ Button btnSelectChat;
 
             @Override
             public void onError(QBResponseException e) {
-
+                Toast.makeText(ListUsersActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

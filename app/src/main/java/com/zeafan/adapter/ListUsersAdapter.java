@@ -49,7 +49,7 @@ public class ListUsersAdapter extends BaseAdapter {
         {
             LayoutInflater layoutInflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view=layoutInflater.inflate(android.R.layout.simple_list_item_multiple_choice,null);
-            TextView textView=view.findViewById(android.R.id.text1);
+            CheckedTextView textView=view.findViewById(android.R.id.text1);
             textView.setText(users.get(position).getLogin());
         }
         return view;
