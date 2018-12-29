@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatDialogsActivity">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lstChatDialog"
+        ></ListView>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_message"
+        android:layout_gravity="bottom|right"
+        app:layout_anchor="@id/lstChatDialog"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_margin="12dp"
+        android:id="@+id/action_add"
+        android:backgroundTint="@color/design_default_color_primary"
+        />
+</android.support.design.widget.CoordinatorLayout>

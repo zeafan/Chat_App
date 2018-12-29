@@ -14,9 +14,22 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_margin="10dp"
-
         android:layout_height="wrap_content">
-        mo<EditText
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#ffffff"
+            android:id="@+id/edFullName"
+            android:padding="5dp"
+            android:textColorHint="#fff"
+            android:hint="@string/full_name"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textColor="#ffffff"

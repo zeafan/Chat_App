@@ -36,15 +36,18 @@ final String ApplicationID="59385";
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user_name=eduser_name.getText().toString();
-                String password=edpassword.getText().toString();
+                final String user_name=eduser_name.getText().toString();
+                final String password=edpassword.getText().toString();
                 if(!user_name.isEmpty()&&password.length()>4)
                 {
                     QBUser qbUser=new QBUser(user_name,password);
                     QBUsers.signIn(qbUser).performAsync(new QBEntityCallback<QBUser>() {
                         @Override
                         public void onSuccess(QBUser qbUser, Bundle bundle) {
-                            Toast.makeText(SignInActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(SignInActivity.this,ChatDialogsActivity.class);
+                            intent.putExtra("user",user_name);
+                            intent.putExtra("password",password);
+                            startActivity(intent);
                         }
 
                         @Override

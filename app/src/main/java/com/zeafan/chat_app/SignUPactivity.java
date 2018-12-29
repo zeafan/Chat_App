@@ -17,12 +17,13 @@ import com.quickblox.users.model.QBUser;
 public class SignUPactivity extends AppCompatActivity {
 Button btnregister;
 EditText eduser_name;
-EditText edpassword;
+EditText edpassword,edFullName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_upactivity);
         RegisterSeesion();
+        edFullName=findViewById(R.id.edFullName);
         eduser_name=findViewById(R.id.edUserName);
         edpassword=findViewById(R.id.edPassword);
         btnregister=findViewById(R.id.btnRegister);
@@ -34,6 +35,7 @@ EditText edpassword;
                 if(!user_name.isEmpty()&&password.length()>4)
                 {
                     QBUser qbUser=new QBUser(user_name,password);
+                    qbUser.setFullName(edFullName.getText().toString());
                     QBUsers.signUp(qbUser).performAsync(new QBEntityCallback<QBUser>() {
                         @Override
                         public void onSuccess(QBUser qbUser, Bundle bundle) {
